@@ -32,7 +32,7 @@ rofi.modi: window,run,ssh,drun
 rofi.show-icons: true
 rofi.terminal: urxvt
 
-rofi.font: Product Sans 20
+rofi.font: Product Sans 19
 
 rofi.width: 100
 rofi.padding: 400
