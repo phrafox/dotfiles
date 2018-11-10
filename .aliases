@@ -1,4 +1,6 @@
-alias i3config="nvim ~/dotfiles/i3.config"
+alias vpn="sudo openvpn --config /etc/openvpn/client.conf"
+alias polybarconfig="nvim ~/dotfiles/.polybar.config"
+alias i3config="nvim ~/dotfiles/.i3.config"
 alias vimconfig="nvim ~/dotfiles/.nvimrc"
 alias zshconfig="nvim ~/dotfiles/.zshrc"
 alias simpleunix="curl -L https://git.io/unix"
