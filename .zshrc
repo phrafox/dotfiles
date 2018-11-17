@@ -9,8 +9,21 @@ ZSH=/usr/share/oh-my-zsh/
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-BULLETTRAIN_PROMPT_CHAR="CMD>"
-BULLETTRAIN_CONTEXT_BG="white"
+#theme colors
+BULLETTRAIN_TIME_BG="yellow"
+BULLETTRAIN_TIME_FG="white"
+
+BULLETTRAIN_CONTEXT_BG="cyan"
+BULLETTRAIN_CONTEXT_FG="black"
+BULLETTRAIN_CONTEXT_DEFAULT_USER="jan"
+BULLETTRAIN_PROMPT_CHAR=""
+BULLETTRAIN_PROMPT_SEPARATE_LINE="false"
+BULLETTRAIN_PROMPT_ORDER=(
+git
+dir
+time
+context
+)
 ZSH_THEME="bullet-train"
 
 # Set list of themes to load
@@ -113,3 +126,4 @@ PERL_MB_OPT="--install_base \"/home/jan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jan/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+~/Scripts/sh/now
