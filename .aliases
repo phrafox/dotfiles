@@ -1,3 +1,5 @@
+alias lockoff="pkill xautolock"
+alias lockon="xautolock -time 10 -locker '/home/jan/.i3/i3lock-fancy-multimonitor/lock' &"
 alias vpn="sudo openvpn --config /etc/openvpn/client.conf"
 alias polybarconfig="nvim ~/dotfiles/.polybar.config"
 alias i3config="nvim ~/dotfiles/.i3.config"
