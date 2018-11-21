@@ -1,0 +1,1 @@
+/home/jan/.config/polybar/topbar_launch.sh
