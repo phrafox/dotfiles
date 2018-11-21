@@ -1,0 +1,14 @@
+#!/bin/bash
+IFTTTLOC="/home/jan/Dropbox/IFTTT-sudo/"
+LOGLOC="/home/jan/Dropbox/ifttt-sudo.log"
+DATE="$(date +%H:%M:%S\ %d.%m.%Y)"
+
+#CMDs:
+TEST_SU="Test"
+
+if [ -e "$IFTTTLOC/$TEST_SU.txt" ]; then
+rm $IFTTTLOC/$TEST_SU.txt
+echo "$DATE - $TEST_SU" >> $LOGLOC
+notify-send IFTTT Worked
+exit 0
+fi

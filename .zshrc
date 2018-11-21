@@ -116,9 +116,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-
-PATH="/home/jan/perl5/bin${PATH:+:${PATH}}"; export PATH;
-export PATH=$PATH:/home/jan/.i3/i3lock-fancy-multimonitor/:/home/jan/Scripts/sh/
+export PATH="/home/jan/perl5/bin:/home/jan/perl5/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/cuda/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/jan/.local/bin/:/home/jan/.fzf/bin:/home/jan/go/bin/"
 
 PERL5LIB="/home/jan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -126,4 +124,4 @@ PERL_MB_OPT="--install_base \"/home/jan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jan/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-~/Scripts/sh/now
+now

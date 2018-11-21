@@ -1,0 +1,47 @@
+#!/bin/bash
+IFTTTLOC="/home/jan/Dropbox/IFTTT/"
+LOGLOC="/home/jan/Dropbox/ifttt.log"
+DATE="$(date +%H:%M:%S\ %d.%m.%Y)"
+
+#CMDs:
+TEST="Test"
+SLEEP="Standby"
+PAUSE="Pause"
+PLAY="Play"
+REBO="Neustart"
+OFF="Herunterfahren"
+
+if [ -e "$IFTTTLOC/$PAUSE.txt" ]; then
+rm $IFTTTLOC/$PAUSE.txt;
+echo "$DATE - $PAUSE" >> $LOGLOC;
+/usr/bin/playerctl pause;
+fi
+
+if [ -e "$IFTTTLOC/$PLAY.txt" ]; then
+rm $IFTTTLOC/$PLAY.txt;
+echo "$DATE - $PLAY" >> $LOGLOC;
+/usr/bin/playerctl play;
+fi
+if [ -e "$IFTTTLOC/$TEST.txt" ]; then
+rm $IFTTTLOC/$TEST.txt;
+echo "$DATE - $TEST" >> $LOGLOC;
+/usr/bin/notify-send "IFTTT" "Worked";
+fi
+
+if [ -e "$IFTTTLOC/$SLEEP.txt" ]; then
+rm $IFTTTLOC/$SLEEP.txt;
+echo "$DATE - $SLEEP" >> $LOGLOC;
+/bin/systemctl suspend;
+fi
+
+if [ -e "$IFTTTLOC/$REBO.txt" ]; then
+rm $IFTTTLOC/$REBO.txt;
+echo "$DATE - $REBO" >> $LOGLOC;
+/usr/bin/reboot;
+fi
+
+if [ -e "$IFTTTLOC/$OFF.txt" ]; then
+rm $IFTTTLOC/$OFF.txt;
+echo "$DATE - $OFF" >> $LOGLOC;
+/usr/bin/poweroff;
+fi
