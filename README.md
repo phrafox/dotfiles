@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f231f4db26564fdc9a0af0ef7d7234b3)](https://www.codacy.com/app/realnajan/dotfiles?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=realnajan/dotfiles&amp;utm_campaign=Badge_Grade)
 # realnajan / dotfiles
 These dotfiles are meant to be used with [i3wm](https://github.com/i3/i3) or [i3-gaps](https://github.com/Airblader/i3). 
 Look down below for the correct symlink locations and dependencies per-file.
