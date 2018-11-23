@@ -1,6 +1,6 @@
 #!/bin/sh
 pamixer -t
-mut=`pamixer --get-mute`
+mut=$(pamixer --get-mute)
 if [ "$mut" = "true" ];
 then
 	notify-send Volume muted
