@@ -19,7 +19,7 @@
 *color7:                          #E0E0E0
 *color15:                         #E8E8E8
 
-URxvt.font: xft:Source Code Pro:size=10.5
+URxvt.font: xft:Inconsolata Nerd Font Mono:size=13 
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false

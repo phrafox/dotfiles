@@ -7,7 +7,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
+Plug 'Lokaltog/neoranger'
 Plug 'mboughaba/i3config.vim'
 call plug#end()
 let g:lightline = {
@@ -20,4 +20,4 @@ syntax on
 colorscheme one
 let g:one_allow_italics = 1
 set background=dark
-map <C-o> :NERDTreeToggle<CR>
+map <C-o> :Ranger<CR>
