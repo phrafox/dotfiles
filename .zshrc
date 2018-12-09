@@ -1,5 +1,6 @@
 source $HOME/.aliases
-cat /home/jan/.cache/wal/sequences
+#cat /home/jan/.cache/wal/sequences
+xrdb ~/.Xresources
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -10,11 +11,19 @@ ZSH=/usr/share/oh-my-zsh/
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #theme colors
-BULLETTRAIN_TIME_BG="yellow"
-BULLETTRAIN_TIME_FG="white"
+BULLETTRAIN_TIME_BG="green"
+BULLETTRAIN_TIME_FG="black"
 
-BULLETTRAIN_CONTEXT_BG="cyan"
-BULLETTRAIN_CONTEXT_FG="black"
+BULLETTRAIN_DIR_BG="yellow"
+BULLETTRAIN_DIR_FG="black"
+
+BULLETTRAIN_PREFIX=""
+BULLETTRAIN_GIT_DIRTY=" %F{red}%F{black}"
+BULLETTRAIN_GIT_CLEAN=" %F{green}%F{black}"
+BULLETTRAIN_GIT_ADDED=" %F{green}%F{black}"
+BULLETTRAIN_GIT_MODIFIED=" "
+BULLETTRAIN_GIT_UNTRACKED=" "
+
 BULLETTRAIN_CONTEXT_DEFAULT_USER="jan"
 BULLETTRAIN_PROMPT_CHAR=""
 BULLETTRAIN_PROMPT_SEPARATE_LINE="false"

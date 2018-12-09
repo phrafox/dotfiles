@@ -1,32 +1,34 @@
-*background:                      #272827
-*foreground:                      #657b83
-*cursorColor:                     #16A085
+*background:                      #000000
+*foreground:                      #abb2bf
+*cursorColor:                     #abb2bf
 
-*color0:                          #232423
-*color8:                          #282928
-*color1:                          #BA2922
-*color9:                          #CC372C
-*color2:                          #7E807E
-*color10:                         #8D8F8D
-*color3:                          #4C4F4D
-*color11:                         #4E524F
-*color4:                          #16A085
-*color12:                         #13BF9D
-*color5:                          #43746A
-*color13:                         #487D72
-*color6:                          #00CCCC
-*color14:                         #00D1D1
-*color7:                          #E0E0E0
-*color15:                         #E8E8E8
+*color0:     #000000
+*color1:     #be5046
+*color2:     #98c379
+*color3:     #d19a66
+*color4:     #61afef
+*color5:     #800080
+*color6:     #008080
+*color7:     #c0c0c0
+*color8:     #5c6370
+*color9:     #e06c75
+*color10:    #98c379
+*color11:    #e5c07b
+*color12:    #61afef
+*color13:    #c678dd
+*color14:    #56b6c2
+*color15:    #abb2bf
 
-URxvt.font: xft:Inconsolata Nerd Font Mono:size=13 
+URxvt.font: xft:Inconsolata Nerd Font Mono:size=13, xft:FontAwesome:size=13 
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*saveLines:                  5000
-URxvt*internalBorder: 5
+URxvt*internalBorder: 0
 URxvt*geometry: 70x19
+URxvt.fading: 20
+URxvt.background: 0 
 
 rofi.modi: window,run,ssh,drun
 rofi.show-icons: true
@@ -35,7 +37,8 @@ rofi.terminal: urxvt
 rofi.font: Product Sans 19
 
 rofi.width: 100
-rofi.padding: 400
+rofi.height: 100
+rofi.padding: 250
 rofi.hide-scrollbar: true
 
 rofi.color-active: #00000000, #9e9e9e, #00000000, #00000000, #ffffff 
