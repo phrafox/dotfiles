@@ -1,5 +1,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f231f4db26564fdc9a0af0ef7d7234b3)](https://www.codacy.com/app/realnajan/dotfiles?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=realnajan/dotfiles&amp;utm_campaign=Badge_Grade)
 # realnajan / dotfiles
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/804f73838eb34b3d82641ac19f969448)](https://app.codacy.com/app/realnajan/dotfiles?utm_source=github.com&utm_medium=referral&utm_content=realnajan/dotfiles&utm_campaign=Badge_Grade_Settings)
+
 These dotfiles are meant to be used with [i3wm](https://github.com/i3/i3) or [i3-gaps](https://github.com/Airblader/i3). 
 
 ## DISCLAIMER
