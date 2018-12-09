@@ -29,6 +29,7 @@ URxvt*internalBorder: 0
 URxvt*geometry: 70x19
 URxvt.fading: 20
 URxvt.background: 0 
+URxvt*urlLauncher: chromium
 
 rofi.modi: window,run,ssh,drun
 rofi.show-icons: true
