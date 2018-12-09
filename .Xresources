@@ -37,8 +37,7 @@ rofi.terminal: urxvt
 rofi.font: Product Sans 19
 
 rofi.width: 100
-rofi.height: 100
-rofi.padding: 250
+rofi.padding: 450
 rofi.hide-scrollbar: true
 
 rofi.color-active: #00000000, #9e9e9e, #00000000, #00000000, #ffffff 
