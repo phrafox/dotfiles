@@ -141,4 +141,8 @@ export NVM_DIR="$HOME/.nvm"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(ssh-agent)" 
+ssh-add ~/.ssh/github_id_rsa
+
 now
