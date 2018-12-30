@@ -1,0 +1,45 @@
+#!/bin/bash
+startrofi() {
+		  echo "Loading..." | rofi -dmenu -p "Select Network" -columns 1 -padding 3 -width 15 -location 2 -no-fixed-num-lines -xoffset 420 -yoffset 35 -bw 2 -color-window '#99000000, #ffffff, #00000000' -font "Jost* Medium 12" -i -me-select-entry '' -me-accept-entry 'MousePrimary' &
+}
+startrofi
+tokill=$!
+list=$(nmcli -f SSID,BARS,SECURITY -t device wifi);
+i=0;
+echo $tokill
+declare -A network;
+declare -A netfields;
+while read -r line; do
+    network[$i]=$line;
+    network[$i,'name']="$(cut -d':' -f1 <<< ${network[$i]})"
+    network[$i,'bars']="$(cut -d':' -f2 <<< ${network[$i]})"
+    network[$i,'sec']="$(cut -d':' -f3 <<< ${network[$i]})"
+	 #echo ""; 
+	 #echo "Network number "$i; 
+	 #echo "Name: "${network[$i,'name']};
+	 echo "Bars: "${network[$i,'bars']};
+	 #echo "Security: "${network[$i,'sec']};
+	 #echo "Full network: "$i: ${network[$i]};
+	 let "i++";
+	 if [ $i -gt 15 ]
+	 then
+		break;
+	 fi
+done <<< "$list";
+
+echo killing now
+kill $tokill
+echo killing ended
+for ((i=1;i<=15;i++)) {
+	rofin+=(${network[$i,'name']});
+	if [ $i == 15 ] 
+	then
+		CHOICE=$(printf '%s\n' "${rofin[@]}" | rofi -dmenu -p "Select Network" -columns 1 -padding 3 -width 15 -location 2 -no-fixed-num-lines -xoffset 420 -yoffset 35 -bw 2 -color-window '#99000000, #ffffff, #00000000' -font "Jost* Medium 12" -i -me-select-entry '' -me-accept-entry 'MousePrimary')
+		if [ -z $CHOICE ]
+      then
+				  exit;
+      fi
+		pass=$(rofi -dmenu -input /dev/null -p "Enter Password > " -columns 1 -padding 3 -width 25 -location 0 -no-fixed-num-lines -bw 2 -color-window '#ff000000, #ffffff, #000000' -font "Jost* Medium 12" -i -me-select-entry '' -me-accept-entry 'MousePrimary')
+		nmcli dev wifi connect $CHOICE password $pass;
+	fi
+}
