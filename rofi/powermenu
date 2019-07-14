@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ARR=()
+ARR+=("Poweroff")
+ARR+=("Reboot")
+ARR+=("Suspend")
+ARR+=("Exit")
+
+color15=${color15:1:7}
+#-config /home/jan/Scripts/rofimenus/configs/powermenu
+# -theme /home/jan/Scripts/rofimenus/themes/menutheme.rasi
+CHOICE=$(printf '%s\n' "${ARR[@]}" | rofi -config /home/jan/bin/rofi/powermenu.config -dmenu -p "Power" -columns 1 -padding 3 -width 10 -location 3 -xoffset 0 -yoffset 35 -color-window '#99000000, #ffffff, #00000000' -font "Jost* Medium 12" -bw 2.5 -no-custom -i -me-select-entry '' -me-accept-entry 'MousePrimary')
+if [ "$CHOICE" = "Exit" ]; then
+    kill -9 $$
+    exit 0
+fi
+
+if [ "$CHOICE" = "Reboot" ]; then
+    systemctl reboot
+    exit 0
+fi
+
+if [ "$CHOICE" = "Poweroff" ]; then
+    systemctl poweroff
+    exit 0
+fi
+
+if [ "$CHOICE" = "Suspend" ]; then
+    systemctl suspend
+    exit 0
+fi
